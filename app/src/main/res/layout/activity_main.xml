@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pozadina"
+    tools:context="com.example.teodora.mojrecnik.MainActivity">
+
+
+    <TextView
+        android:id="@+id/voiceInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:alpha=".5"
+        android:background="@drawable/okvir"
+        android:gravity="center"
+        android:hint="izgovorena reč"
+        android:textColor="@android:color/holo_orange_light"
+        android:textColorHint="@android:color/holo_orange_light"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/engleski_textview"
+        android:layout_width="250dp"
+        android:layout_height="213dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:alpha=".5"
+        android:background="@drawable/okvir"
+        android:gravity="center"
+        android:hint="definicija izgovorene reči"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/holo_orange_light"
+        android:textColorHint="@android:color/holo_orange_light"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:id="@+id/btnSpeakContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/mic" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSpeak"
+            android:layout_margin="10dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/hint" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mojSpisak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="94dp"
+        android:background="@android:color/transparent"
+        android:clickable="false"
+        android:tint="@android:color/holo_orange_light"
+        app:srcCompat="@mipmap/moje_reci" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="149dp"
+        android:layout_marginEnd="79dp"
+        android:alpha="0.5"
+        android:text="Moj spisak"
+        android:textColor="@android:color/holo_orange_light" />
+
+    <Button
+        android:id="@+id/ubaciBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/voiceInput"
+        android:layout_alignTop="@+id/mojSpisak"
+        android:alpha="0.7"
+        android:background="@drawable/okvir"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="Ubaci u Moj spisak"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>

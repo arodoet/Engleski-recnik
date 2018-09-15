@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MojRecnik</string>
+    <string name="hint">Pritisni na mikrofon</string>
+    <string name="prazna_lista">NEMA REČI</string>
+
+
+</resources>
